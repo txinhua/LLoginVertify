@@ -13,6 +13,10 @@
 		D01777BC1D2E4C2C00396290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01777BA1D2E4C2C00396290 /* Main.storyboard */; };
 		D01777BE1D2E4C2C00396290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01777BD1D2E4C2C00396290 /* Assets.xcassets */; };
 		D01777C11D2E4C2C00396290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01777BF1D2E4C2C00396290 /* LaunchScreen.storyboard */; };
+		D01777CA1D2F369A00396290 /* CryptorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01777C91D2F369A00396290 /* CryptorTools.m */; };
+		D01777CD1D2F56A900396290 /* rsa_cert.der in Resources */ = {isa = PBXBuildFile; fileRef = D01777CB1D2F56A900396290 /* rsa_cert.der */; };
+		D01777CE1D2F56A900396290 /* p.p12 in Resources */ = {isa = PBXBuildFile; fileRef = D01777CC1D2F56A900396290 /* p.p12 */; };
+		D01777D11D2F6F5600396290 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = D01777D01D2F6F5600396290 /* RSA.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		D01777BD1D2E4C2C00396290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01777C01D2E4C2C00396290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01777C21D2E4C2C00396290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D01777C81D2F369A00396290 /* CryptorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptorTools.h; sourceTree = "<group>"; };
+		D01777C91D2F369A00396290 /* CryptorTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptorTools.m; sourceTree = "<group>"; };
+		D01777CB1D2F56A900396290 /* rsa_cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsa_cert.der; sourceTree = "<group>"; };
+		D01777CC1D2F56A900396290 /* p.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = p.p12; sourceTree = "<group>"; };
+		D01777CF1D2F6F5600396290 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		D01777D01D2F6F5600396290 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,12 @@
 				D01777B51D2E4C2C00396290 /* AppDelegate.m */,
 				D01777B71D2E4C2C00396290 /* ViewController.h */,
 				D01777B81D2E4C2C00396290 /* ViewController.m */,
+				D01777CB1D2F56A900396290 /* rsa_cert.der */,
+				D01777CC1D2F56A900396290 /* p.p12 */,
+				D01777C81D2F369A00396290 /* CryptorTools.h */,
+				D01777C91D2F369A00396290 /* CryptorTools.m */,
+				D01777CF1D2F6F5600396290 /* RSA.h */,
+				D01777D01D2F6F5600396290 /* RSA.m */,
 				D01777BA1D2E4C2C00396290 /* Main.storyboard */,
 				D01777BD1D2E4C2C00396290 /* Assets.xcassets */,
 				D01777BF1D2E4C2C00396290 /* LaunchScreen.storyboard */,
@@ -136,8 +152,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01777CD1D2F56A900396290 /* rsa_cert.der in Resources */,
 				D01777C11D2E4C2C00396290 /* LaunchScreen.storyboard in Resources */,
 				D01777BE1D2E4C2C00396290 /* Assets.xcassets in Resources */,
+				D01777CE1D2F56A900396290 /* p.p12 in Resources */,
 				D01777BC1D2E4C2C00396290 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01777B91D2E4C2C00396290 /* ViewController.m in Sources */,
+				D01777D11D2F6F5600396290 /* RSA.m in Sources */,
+				D01777CA1D2F369A00396290 /* CryptorTools.m in Sources */,
 				D01777B61D2E4C2C00396290 /* AppDelegate.m in Sources */,
 				D01777B31D2E4C2C00396290 /* main.m in Sources */,
 			);
@@ -264,8 +284,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EncryptionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vcainfo.dscyz.EncryptionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcainfo.dscyz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -275,8 +296,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EncryptionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vcainfo.dscyz.EncryptionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcainfo.dscyz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -300,6 +322,7 @@
 				D01777C71D2E4C2C00396290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
